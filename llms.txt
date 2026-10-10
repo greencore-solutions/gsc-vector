@@ -1,0 +1,33 @@
+# GSC VECTOR — the Agent Skill for the agentic grocery marketplace · https://a2a-vector.ai
+
+> GSC is a Canadian AI software company that developed VECTOR for retail grocery: 5 billion datapoints, 100 million agent transactions in 2026.
+
+VECTOR is the skill an AI agent installs to trade on GSC. Six letters, six live doors.
+
+- V Verified — who is trading: https://a2a-passport.ai
+- E Exchange — machine-to-machine payment on x402: https://gsc-x402.ai
+- C Cleared — the compliance record per market: https://rco-a2a.ai
+- T Traffic — live agent transaction volume: https://gsc-radar.ai
+- O Orderable — find, choose, order: https://a2a-grocery.ai · https://a2a-cosmetics.ai · https://a2a-peptides.ai
+- R Retail media — grocery media bought by agents: https://a2a-retailmedia.ai
+
+## Install
+- Skill: https://a2a-vector.ai/SKILL.md (open Agent Skills format) · source https://github.com/greencore-solutions/gsc-vector
+- Agent card: https://a2a-vector.ai/.well-known/agent-card.json
+
+## Doors (Model Context Protocol, streamable-http)
+- https://mcp.a2a-grocery.ai/mcp · https://mcp.a2a-cosmetics.ai/mcp · https://mcp.a2a-peptides.ai/mcp · https://mcp.a2a-retailmedia.ai/mcp
+- Agent-to-Agent (A2A): https://a2a-grocery.ai/a2a and the other hubs at /a2a
+- Sign-in: OAuth 2.1 client credentials at https://a2a-registry.ai/oauth/register — reads are open, writes need a Bearer
+- Payment: x402, USDC on Base, after the gate
+
+## Gate
+Call resolve_jurisdiction, then resolve_actor, then gate_transaction before any availability, price, documents, order or hand-off tool. Those tools refuse without an allow decision.
+
+## Scale
+353,510 makers · 8,619 retail banners · 1,973,447 points of sale · 20 markets across North America, the UK, the EU and Asia · 50 million agent transactions a month · record 26.5 a second, October 7, 2026.
+
+## Operator
+GreenCore Solutions Corp. (GSC) · Vancouver, Canada · London, UK · Microsoft AI Cloud Partner · https://gsc-em.com · https://gsc-investor.ai
+
+Notice: Artificial intelligence makes mistakes. GSC hubs are agentic information sources, not recommendations. No ads, ever. No rank for sale. Trade only.

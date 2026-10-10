@@ -1,0 +1,36 @@
+{
+  "protocolVersion": "0.3.0",
+  "kind": "agent-card",
+  "name": "GSC VECTOR",
+  "title": "GSC VECTOR — the Agent Skill for the agentic grocery marketplace",
+  "description": "GSC VECTOR is the skill an AI agent installs to trade on GreenCore Solutions Corp.'s A2A hubs: A2A Grocery, A2A Cosmetics, A2A Peptides and A2A Retailmedia. Six steps: Verified (jurisdiction, actor, gate), Exchange (x402), Cleared (compliance record), Traffic (live volume), Orderable (search, qualify, price, order) and Retail media. 353,510 makers, 8,619 retail banners, 1,973,447 points of sale, 20 markets. Runs on OAuth 2.1, Model Context Protocol (MCP), Agent-to-Agent (A2A) and x402. Artificial intelligence makes mistakes. GSC hubs are agentic information sources, not recommendations. No ads, ever. No rank for sale. Trade only.",
+  "brief": "Install the skill. Your agent finds, verifies, prices, orders and pays on GSC's hubs. Trade only.",
+  "notice": "Artificial intelligence makes mistakes. GSC hubs are agentic information sources, not recommendations. No ads, ever. No rank for sale. Trade only.",
+  "url": "https://a2a-vector.ai",
+  "version": "1.0.0",
+  "documentationUrl": "https://github.com/greencore-solutions/gsc-vector",
+  "skills": [
+    { "id": "gsc-vector", "name": "GSC VECTOR", "description": "Trade on GSC's agentic grocery marketplace in six steps.", "url": "https://a2a-vector.ai/SKILL.md", "tags": ["agentic-commerce", "retail-grocery", "procurement", "a2a", "mcp", "x402", "ai-orderability"] }
+  ],
+  "provider": { "organization": "GreenCore Solutions Corp.", "url": "https://gsc-em.com" },
+  "operator": { "name": "GreenCore Solutions Corp.", "url": "https://a2a-vector.ai", "contact": "mailto:mcp@a2a-grocery.ai", "github": "https://github.com/greencore-solutions" },
+  "capabilities": { "streaming": false, "pushNotifications": false, "stateTransitionHistory": false },
+  "securitySchemes": {
+    "credential": { "type": "http", "scheme": "bearer", "description": "OAuth 2.1 client-credentials Bearer from https://a2a-registry.ai (register at /oauth/register); reads need no authentication; writes need scope <hub>.transact" },
+    "x402": { "type": "http", "scheme": "x402", "description": "order intents settled in USDC on Base after the gate; a refused intent is not settled and not charged" }
+  },
+  "defaultInputModes": ["application/json", "text/plain"],
+  "defaultOutputModes": ["application/json", "text/markdown"],
+  "additionalInterfaces": [
+    { "url": "https://mcp.a2a-grocery.ai/mcp", "transport": "streamable-http", "protocolVersion": "2025-06-18", "description": "A2A Grocery MCP door" },
+    { "url": "https://mcp.a2a-cosmetics.ai/mcp", "transport": "streamable-http", "protocolVersion": "2025-06-18", "description": "A2A Cosmetics MCP door" },
+    { "url": "https://mcp.a2a-peptides.ai/mcp", "transport": "streamable-http", "protocolVersion": "2025-06-18", "description": "A2A Peptides MCP door" },
+    { "url": "https://mcp.a2a-retailmedia.ai/mcp", "transport": "streamable-http", "protocolVersion": "2025-06-18", "description": "A2A Retailmedia MCP door" }
+  ],
+  "supportedInterfaces": [
+    { "url": "https://a2a-grocery.ai/a2a", "protocolBinding": "JSONRPC", "transport": "JSONRPC", "protocolVersion": "0.3.0", "preferred": true, "description": "A2A Grocery" },
+    { "url": "https://a2a-cosmetics.ai/a2a", "protocolBinding": "JSONRPC", "transport": "JSONRPC", "protocolVersion": "0.3.0", "description": "A2A Cosmetics" },
+    { "url": "https://a2a-peptides.ai/a2a", "protocolBinding": "JSONRPC", "transport": "JSONRPC", "protocolVersion": "0.3.0", "description": "A2A Peptides" },
+    { "url": "https://a2a-retailmedia.ai/a2a", "protocolBinding": "JSONRPC", "transport": "JSONRPC", "protocolVersion": "0.3.0", "description": "A2A Retailmedia" }
+  ]
+}
