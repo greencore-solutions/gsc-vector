@@ -1,6 +1,6 @@
 // site/build.mjs — a2a-vector.ai: render README.md with the A2A hub chrome; serve SKILL.md, llms.txt, agent-card.json verbatim.
 // Output: dist/ (index.html, index.md = README.md bytes, SKILL.md, llms.txt, README.md, .well-known/agent-card.json, styles.css, _headers).
-// The repo is the only copy of the four files; this script reads them at build time. VECTOR-02 (CEO 2026-10-10).
+// The repo is the only copy of the four files; this script reads them at build time. VECTOR-02 (CEO 2026-10-10). VECTOR-09 (CEO 2026-10-11): the footer of record — close line Powered by VECTOR → gsc-vector.ai, the GSC links, © 2026, the operator line with both offices.
 import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from "node:fs";
 import { marked } from "marked";
 const readme = readFileSync("README.md", "utf8");
@@ -42,7 +42,10 @@ ${marked.parse(readme).replace(/<h1[^>]*>[^<]*<\/h1>/, `<h1>${h1}</h1>`)}
 <label>Message <input type="text" name="message"></label>
 <button class="btn btn-o" type="submit">Send</button>
 </form></section>
-<p class="op">${operatorLine}</p><p class="nc">${ceoBlock}</p></div></footer>
+<p class="op"><a href="https://gsc-vector.ai/">Powered by VECTOR</a> · GSC is an AI software company that developed A2A-Grocery, powered by VECTOR.</p>
+<p class="op"><a href="https://gsc-investor.ai/">Investors</a> · <a href="https://www.prnewswire.com/news/greencore-solutions-corp./">News</a> · <a href="https://gsc-em.com/sitemap">Sitemap</a> · <a href="https://gsc-vector.ai/">VECTOR</a> · <a href="https://gsc-x402.ai/">x402</a> · <a href="https://gsc-em.com/legal">Legal</a> · <a href="https://gsc-em.com/privacy">Privacy</a></p>
+<p class="op">© 2026 GreenCore Solutions Corp.</p>
+<p class="op">GreenCore Solutions Corp. · 260-4611 Viking Way, Richmond, BC V6V 2K9, Canada · GreenCore Solutions (UK) · Medius House, 2 Sheraton St, London W1F 8BH, United Kingdom · D-U-N-S 24-336-6774 · Microsoft AI Cloud Partner</p><p class="nc">${ceoBlock}</p></div></footer>
 </body>
 </html>
 `;
