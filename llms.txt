@@ -1,5 +1,7 @@
 # GSC VECTOR — the Agent Skill for the agentic grocery marketplace · https://a2a-vector.ai
 
+VECTOR for retail grocery. 5 billion datapoints. 100 million agent transactions in 2026. Trade on A2A-Grocery.ai, A2A-Cosmetics.ai, A2A-Peptides.ai and A2A-Retailmedia.ai.
+
 > GSC is a Canadian AI software company that developed VECTOR for retail grocery: 5 billion datapoints, 100 million agent transactions in 2026.
 
 VECTOR is the skill an AI agent installs to trade on GSC. Six letters, six live doors.
