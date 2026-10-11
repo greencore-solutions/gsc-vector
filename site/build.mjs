@@ -29,7 +29,17 @@ const html = `<!doctype html>
 <main class="wrap doc">
 ${marked.parse(readme)}
 </main>
-<footer class="ft"><div class="wrap"><div class="links">${nav}</div><p class="op">${operatorLine}</p><p class="nc">${ceoBlock}</p></div></footer>
+<footer class="ft"><div class="wrap"><div class="links">${nav}</div>
+<section class="form" id="record"><h2>Put your product on the record</h2>
+<form action="https://formspree.io/f/xgaoypqv" method="POST">
+<label>Company <input type="text" name="company" required></label>
+<label>Name <input type="text" name="name" required></label>
+<label>Email <input type="email" name="email" required></label>
+<label>Markets <input type="text" name="markets"></label>
+<label>Message <input type="text" name="message"></label>
+<button class="btn btn-o" type="submit">Send</button>
+</form></section>
+<p class="op">${operatorLine}</p><p class="nc">${ceoBlock}</p></div></footer>
 </body>
 </html>
 `;
@@ -44,7 +54,7 @@ writeFileSync("dist/_headers", `/*
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'
+  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'; form-action https://formspree.io
 /SKILL.md
   Content-Type: text/markdown; charset=utf-8
 /index.md
