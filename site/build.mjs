@@ -6,6 +6,7 @@ import { marked } from "marked";
 const readme = readFileSync("README.md", "utf8");
 const llmsFirst = readFileSync("llms.txt", "utf8").split("\n")[0].replace(/^#\s*/, "");
 const title = llmsFirst.split(" · ")[0];
+const h1 = (readme.match(/^\*\*([^*]+)\*\*/m) || [null, title])[1];   // the README title is its bold name line, never the repo slug heading
 const hubs = [["A2A Grocery", "https://a2a-grocery.ai/"], ["A2A Cosmetics", "https://a2a-cosmetics.ai/"], ["A2A Peptides", "https://a2a-peptides.ai/"], ["A2A Retailmedia", "https://a2a-retailmedia.ai/"]];
 const files = [["SKILL.md", "/SKILL.md"], ["llms.txt", "/llms.txt"], ["Agent Card", "/.well-known/agent-card.json"], ["Markdown twin", "/index.md"]];
 const nav = hubs.map(([n, u]) => `<a href="${u}">${n}</a>`).join("") + files.map(([n, u]) => `<a href="${u}">${n}</a>`).join("");
@@ -21,13 +22,13 @@ const html = `<!doctype html>
 <link rel="canonical" href="https://a2a-vector.ai/" />
 <link rel="stylesheet" href="/styles.css" />
 <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
-<link rel="alternate" type="application/json" href="/.well-known/agent-card.json" title="GSC VECTOR Agent Card" />
+<link rel="alternate" type="application/json" href="/.well-known/agent-card.json" title="A2A-VECTOR Agent Card" />
 <link rel="alternate" type="text/markdown" href="/index.md" title="Markdown twin" />
 </head>
 <body>
-<header class="hd"><div class="wrap"><a class="brand" href="/" aria-label="GSC VECTOR home"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="256" fill="#1E6BFF"/><path d="M256 133 377 341H135Z" fill="none" stroke="#FFFFFF" stroke-width="27" stroke-linejoin="round"/></svg><span class="bn">GSC VECTOR</span><span class="bt">AGENT SKILL</span></a><nav class="nav" aria-label="Primary">${nav}</nav></div></header>
+<header class="hd"><div class="wrap"><a class="brand" href="/" aria-label="A2A-VECTOR home"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="256" fill="#1E6BFF"/><path d="M256 133 377 341H135Z" fill="none" stroke="#FFFFFF" stroke-width="27" stroke-linejoin="round"/></svg><span class="bn">A2A-VECTOR</span><span class="bt">AGENT SKILL</span></a><nav class="nav" aria-label="Primary">${nav}</nav></div></header>
 <main class="wrap doc">
-${marked.parse(readme)}
+${marked.parse(readme).replace(/<h1[^>]*>[^<]*<\/h1>/, `<h1>${h1}</h1>`)}
 </main>
 <footer class="ft"><div class="wrap"><div class="links">${nav}</div>
 <section class="form" id="record"><h2>Put your product on the record</h2>

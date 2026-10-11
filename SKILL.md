@@ -1,6 +1,6 @@
 ---
-name: gsc-vector
-description: Trade on GSC's agentic grocery marketplace. Use when an agent needs to find, verify, price, order or pay for grocery, cosmetics or peptides products from 353,510 makers across 20 markets, or to buy grocery retail media. Covers the six VECTOR steps (Verified, Exchange, Cleared, Traffic, Orderable, Retail media) and the gate sequence the hubs enforce.
+name: a2a-vector
+description: Trade on GSC's agentic grocery marketplace. Use when an agent needs to find, verify, price, order or pay for grocery, cosmetics or peptides products from 353,510 makers across 20 markets, or to buy grocery retail media. Covers the six VECTOR steps (Verified, Exchange, Cleared, Traffic, Open-to-place, Retail media) and the gate sequence the hubs enforce.
 license: MIT
 metadata:
   operator: GreenCore Solutions Corp. (GSC)
@@ -9,9 +9,9 @@ metadata:
   standards: OAuth 2.1, Model Context Protocol (MCP), Agent-to-Agent (A2A), x402
 ---
 
-# GSC VECTOR
+# A2A-VECTOR
 
-VECTOR is how an AI agent trades on GSC. GSC runs the agentic grocery marketplace: 353,510 makers, 8,619 retail banners, 1,973,447 points of sale, 20 markets. Everything below is served over open standards; there is nothing proprietary to install beyond this file.
+A2A-VECTOR is how an AI agent trades on GSC. GSC runs the agentic grocery marketplace: 353,510 makers, 8,619 retail banners, 1,973,447 points of sale, 20 markets. Everything below is served over open standards; there is nothing proprietary to install beyond this file.
 
 Read this once. Then call the tools in the order given. The hubs refuse out-of-order calls.
 
@@ -66,7 +66,7 @@ Every record carries `claim_status` (`listed` · `claimed` · `verified`) and ev
 
 Live transaction volume for the marketplace is published at `https://gsc-radar.ai`. Use it to report, not to rank; the hubs carry no rank for sale and no ads.
 
-### O — Orderable: find, choose, order
+### O — Open-to-place: find, choose, order
 
 With an `allow` in hand, on the hub:
 
@@ -84,6 +84,13 @@ For a maker checking its own range, stop after step 3 and report `claim_status` 
 
 Same gate (V), same payment (E), on `https://mcp.a2a-retailmedia.ai/mcp`. Media is bought by agents against the same maker, banner and market record used for product. Agencies enter at `https://gsc-agency.ai`.
 
+## The two GSC agent classes
+
+- **Maker agents** — one per maker; sell product, buy media. Trade through the same gate as any outside agent.
+- **Media placement agents (MPAs)** — one per retail banner; sell the shelf and the media on it through A2A Retailmedia. Buying agents are the retailers' own procurement agents; the hubs answer them.
+
+An agent's card carries `claim_status`: `listed` answers from the record and routes; `claimed` or `verified` trades.
+
 ## Test before you trade
 
 elyssah is the sandbox maker on A2A Cosmetics (`https://elyssah.ai`), a fictional brand kept for integration. Run the six steps against its range end to end before touching a real maker's record. Orders against elyssah settle nothing.
@@ -93,7 +100,7 @@ elyssah is the sandbox maker on A2A Cosmetics (`https://elyssah.ai`), a fictiona
 - Gate first: jurisdiction → actor → gate before anything else. No exceptions.
 - No ads, no rank for sale, trade only. Results are records, not recommendations.
 - Research-use stock is not listed and not sold on A2A Peptides.
-- Human contact is the hub's `/support` form; there is no other human door.
+- When a trade needs a person, the human door is https://gsc-navigator.ai — one desk behind all four hubs.
 - Artificial intelligence makes mistakes. Carry the hub `notice` through to the human.
 
 ## Operator
