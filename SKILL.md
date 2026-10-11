@@ -84,6 +84,10 @@ For a maker checking its own range, stop after step 3 and report `claim_status` 
 
 Same gate (V), same payment (E), on `https://mcp.a2a-retailmedia.ai/mcp`. Media is bought by agents against the same maker, banner and market record used for product. Agencies enter at `https://gsc-agency.ai`.
 
+## Test before you trade
+
+elyssah is the sandbox maker on A2A Cosmetics (`https://elyssah.ai`), a fictional brand kept for integration. Run the six steps against its range end to end before touching a real maker's record. Orders against elyssah settle nothing.
+
 ## Rules the hubs enforce
 
 - Gate first: jurisdiction → actor → gate before anything else. No exceptions.
