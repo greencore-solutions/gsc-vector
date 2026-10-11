@@ -32,7 +32,9 @@ ${marked.parse(readme).replace(/<h1[^>]*>[^<]*<\/h1>/, `<h1>${h1}</h1>`)}
 </main>
 <footer class="ft"><div class="wrap"><div class="links">${nav}</div>
 <section class="form" id="record"><h2>Put your product on the record</h2>
-<form action="https://formspree.io/f/xgaoypqv" method="POST">
+<form action="https://formspree.io/f/xljrwwlk" method="POST">
+<input type="hidden" name="site" value="a2a-vector.ai"><input type="hidden" name="hub" value="Vector"><input type="hidden" name="_subject" value="Vector — form">
+<div hidden aria-hidden="true"><label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
 <label>Company <input type="text" name="company" required></label>
 <label>Name <input type="text" name="name" required></label>
 <label>Email <input type="email" name="email" required></label>
