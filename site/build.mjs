@@ -43,7 +43,7 @@ ${marked.parse(readme).replace(/<h1[^>]*>[^<]*<\/h1>/, `<h1>${h1}</h1>`)}
 <button class="btn btn-o" type="submit">Send</button>
 </form></section>
 <p class="op"><a href="https://gsc-vector.ai/">Powered by VECTOR</a> · GSC is an AI software company that developed A2A-Grocery, powered by VECTOR.</p>
-<p class="op"><a href="https://gsc-investor.ai/">Investors</a> · <a href="https://www.prnewswire.com/news/greencore-solutions-corp./">News</a> · <a href="https://gsc-em.com/sitemap">Sitemap</a> · <a href="https://gsc-vector.ai/">VECTOR</a> · <a href="https://gsc-agenthub.ai/">Hubs</a> · <a href="https://gsc-x402.ai/">x402</a> · <a href="https://gsc-em.com/legal">Legal</a> · <a href="https://gsc-em.com/privacy">Privacy</a></p>
+<p class="op"><a href="https://gsc-investor.ai/">Investors</a> · <a href="https://www.prnewswire.com/news/greencore-solutions-corp./">News</a> · <a href="https://gsc-em.com/sitemap">Sitemap</a> · <a href="https://gsc-vector.ai/">VECTOR</a> · <a href="https://gsc-agenthub.ai/">Hubs</a> · <a href="https://gsc-sustainability.ai/">Sustainability</a> · <a href="https://gsc-x402.ai/">x402</a> · <a href="https://gsc-em.com/legal">Legal</a> · <a href="https://gsc-em.com/privacy">Privacy</a></p>
 <p class="op">© 2026 GreenCore Solutions Corp.</p>
 <p class="op">GreenCore Solutions Corp. · 260-4611 Viking Way, Richmond, BC V6V 2K9, Canada · GreenCore Solutions (UK) · Medius House, 2 Sheraton St, London W1F 8BH, United Kingdom · D-U-N-S 24-336-6774 · Microsoft AI Cloud Partner</p><p class="nc">${ceoBlock}</p></div></footer>
 </body>
