@@ -3,17 +3,17 @@
   "kind": "agent-card",
   "name": "A2A-VECTOR",
   "title": "A2A-VECTOR — the Agent Skill for the agentic grocery marketplace",
-  "description": "A2A-VECTOR is the skill an AI agent installs to trade on GreenCore Solutions Corp.'s A2A hubs: A2A Grocery, A2A Cosmetics, A2A Peptides and A2A Retailmedia. Six steps: Verified (jurisdiction, actor, gate), Exchange (x402), Cleared (compliance record), Traffic (live volume), Open-to-place (on the record, open to every buying agent and media placement agent; search, qualify, price, order) and Retail media. 353,510 makers, 8,619 retail banners, 1,973,447 points of sale, 20 markets. Runs on OAuth 2.1, Model Context Protocol (MCP), Agent-to-Agent (A2A) and x402. Artificial intelligence makes mistakes. GSC hubs are agentic information sources, not recommendations. No ads, ever. No rank for sale. Trade only.",
+  "description": "A2A-VECTOR is the skill an AI agent installs to trade on GreenCore Solutions Corp.'s A2A hubs: A2A Grocery, A2A Cosmetics, A2A Peptides and A2A Retailmedia. Six steps: Verified (jurisdiction, actor, gate), Exchange (x402), Confirmed (fetch_gtin on gtinfetch.ai: products confirmed by their barcode, 40M GTINs, live on MCP; confidence confirmed · seen · unknown, with source pages), Traffic (live volume), Open-to-place (on the record, open to every buying agent and media placement agent; search, qualify, price, order) and Retail media. 353,510 makers, 8,619 retail banners, 1,973,447 points of sale, 20 markets. Runs on OAuth 2.1, Model Context Protocol (MCP), Agent-to-Agent (A2A) and x402. Artificial intelligence makes mistakes. GSC hubs are agentic information sources, not recommendations. No ads, ever. No rank for sale. Trade only.",
   "brief": "Install the skill. Your agent finds, verifies, prices, orders and pays on GSC's hubs. Trade only.",
   "notice": "Artificial intelligence makes mistakes. GSC hubs are agentic information sources, not recommendations. No ads, ever. No rank for sale. Trade only.",
   "url": "https://a2a-vector.ai",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "documentationUrl": "https://github.com/greencore-solutions/gsc-vector",
   "skills": [
     {
       "id": "a2a-vector",
       "name": "A2A-VECTOR",
-      "description": "Trade on GSC's agentic grocery marketplace in six steps.",
+      "description": "Trade on GSC's agentic grocery marketplace in six steps; the C step confirms each product by its barcode with fetch_gtin on gtinfetch.ai.",
       "url": "https://a2a-vector.ai/SKILL.md",
       "tags": [
         "agentic-commerce",

@@ -8,13 +8,13 @@ A2A-VECTOR is the skill an AI agent installs to trade on GSC. Six letters, six l
 
 - V Verified — who is trading: https://a2a-passport.ai
 - E Exchange — machine-to-machine payment on x402: https://gsc-x402.ai
-- C Cleared — the compliance record per market: https://rco-a2a.ai
+- C Confirmed — products confirmed by their barcode: 40M GTINs, live on MCP: https://gtinfetch.ai — fetch_gtin(gtin, market) on https://gtinfetch.ai/mcp returns confidence (confirmed · seen · unknown) and the source pages
 - T Traffic — live AI agent traffic: https://gsc-radar.ai
 - O Open-to-place — find, choose, order: https://a2a-grocery.ai · https://a2a-cosmetics.ai · https://a2a-peptides.ai
 - R Retail media — grocery media bought by agents: https://a2a-retailmedia.ai
 
 ## Install
-- Skill: https://a2a-vector.ai/SKILL.md (open Agent Skills format) · source https://github.com/greencore-solutions/gsc-vector
+- Skill: https://a2a-vector.ai/SKILL.md (open Agent Skills format, version 1.1.0) · source https://github.com/greencore-solutions/gsc-vector
 - Agent card: https://a2a-vector.ai/.well-known/agent-card.json
 
 ## Doors (Model Context Protocol, streamable-http)

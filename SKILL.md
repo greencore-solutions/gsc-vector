@@ -1,10 +1,10 @@
 ---
 name: a2a-vector
-description: Trade on GSC's agentic grocery marketplace. Use when an agent needs to find, verify, price, order or pay for grocery, cosmetics or peptides products from 353,510 makers across 20 markets, or to buy grocery retail media. Covers the six VECTOR steps (Verified, Exchange, Cleared, Traffic, Open-to-place, Retail media) and the gate sequence the hubs enforce.
+description: Trade on GSC's agentic grocery marketplace. Use when an agent needs to find, verify, confirm by barcode, price, order or pay for grocery, cosmetics or peptides products from 353,510 makers across 20 markets, or to buy grocery retail media. Covers the six VECTOR steps (Verified, Exchange, Confirmed, Traffic, Open-to-place, Retail media) and the gate sequence the hubs enforce.
 license: MIT
 metadata:
   operator: GreenCore Solutions Corp. (GSC)
-  version: "1.0.0"
+  version: "1.1.0"
   surface: https://a2a-vector.ai
   standards: OAuth 2.1, Model Context Protocol (MCP), Agent-to-Agent (A2A), x402
 ---
@@ -18,7 +18,7 @@ Read this once. Then call the tools in the order given. The hubs refuse out-of-o
 ## When to use this skill
 
 - A buyer's agent (retailer, distributor, importer, private label) needs to source, qualify, price or order a product for a market.
-- A maker's or brand's agent needs to check whether its product is on the record, cleared and orderable in a market.
+- A maker's or brand's agent needs to check whether its product is on the record, confirmed by its barcode and orderable in a market.
 - An agent needs to buy grocery retail media (placement, promotion) rather than product.
 - Any agent needs to settle a trade machine-to-machine.
 
@@ -53,14 +53,14 @@ Every later tool checks for an `allow` decision from step 3 (peptides may return
 
 Order intents settle on x402 (USDC on Base) after the gate. A refused intent is not settled and not charged. Receipts are signed. The payment door is `https://gsc-x402.ai`; the hub's agent card lists x402 under `securitySchemes`. Do not collect card numbers or bank details; there are none in this flow.
 
-### C — Cleared: is the product allowed in this market
+### C — Confirmed: is this the product it says it is
 
-Before pricing or ordering, confirm clearance for the product in the jurisdiction:
+Before pricing or ordering, confirm the product by its barcode:
 
+- `fetch_gtin(gtin, market)` on `https://gtinfetch.ai/mcp` (or `GET https://gtinfetch.ai/01/{gtin14}`) returns the signed record: product, brand, maker, where it has been seen and when, `confidence` (`confirmed` · `seen` · `unknown`) and the source pages. Treat `unknown` as not confirmed; never guess a product from its digits.
 - On the hub: `get_market_status`, `get_label_and_claims` (grocery, cosmetics) or `get_label_and_indication` (peptides), `get_enforcement_watch`.
-- Cross-hub compliance record: `resolve_compliance(object_id, jurisdiction)` on `https://mcp.rco-a2a.ai` returns the current signed Regulatory Compliance Object, or a signed not-found.
 
-Every record carries `claim_status` (`listed` · `claimed` · `verified`) and every field carries its source page. Prefer `verified`. Surface `notice` to the human when one is present.
+Every record carries `claim_status` (`listed` · `claimed` · `verified`) and every field carries its source page. Prefer `verified` and `confirmed`. Surface `notice` to the human when one is present.
 
 ### T — Traffic: what is moving
 
@@ -78,7 +78,7 @@ With an `allow` in hand, on the hub:
 6. `a2a_handoff` to pass the task to the counterparty's agent when the trade needs it.
 7. `log_audit` at the end of every session.
 
-For a maker checking its own range, stop after step 3 and report `claim_status` and clearance per market.
+For a maker checking its own range, stop after step 3 and report `claim_status` and `confidence` per market.
 
 ### R — Retail media: buy the shelf, not the product
 
