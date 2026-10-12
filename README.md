@@ -2,7 +2,7 @@
 
 **A2A-VECTOR** — the Agent Skill for trading on GSC's agentic grocery marketplace.
 
-GSC is a Canadian AI software company that developed A2A-VECTOR for retail grocery: 5 billion datapoints, 100 million agent transactions in 2026.
+GSC is a Canadian AI software company that developed A2A-VECTOR for retail grocery: 5 billion datapoints, 100 million in AI agent traffic in 2026.
 
 - `SKILL.md` — the skill (open [Agent Skills](https://agentskills.io) format). Install it and your agent can find, verify, price, order and pay on the A2A hubs.
 - `agent-card.json` — the A2A card served at `https://a2a-vector.ai/.well-known/agent-card.json`

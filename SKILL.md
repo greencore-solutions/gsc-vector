@@ -64,7 +64,7 @@ Every record carries `claim_status` (`listed` · `claimed` · `verified`) and ev
 
 ### T — Traffic: what is moving
 
-Live transaction volume for the marketplace is published at `https://gsc-radar.ai`. Use it to report, not to rank; the hubs carry no rank for sale and no ads.
+Live AI agent traffic for the marketplace is published at `https://gsc-radar.ai`. Use it to report, not to rank; the hubs carry no rank for sale and no ads.
 
 ### O — Open-to-place: find, choose, order
 

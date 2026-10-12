@@ -1,15 +1,15 @@
 # A2A-VECTOR — the Agent Skill for the agentic grocery marketplace · https://a2a-vector.ai
 
-A2A-VECTOR for retail grocery. 5 billion datapoints. 100 million agent transactions in 2026. Trade on A2A-Grocery.ai, A2A-Cosmetics.ai, A2A-Peptides.ai and A2A-Retailmedia.ai.
+A2A-VECTOR for retail grocery. 5 billion datapoints. 100 million in AI agent traffic in 2026. Trade on A2A-Grocery.ai, A2A-Cosmetics.ai, A2A-Peptides.ai and A2A-Retailmedia.ai.
 
-> GSC is a Canadian AI software company that developed A2A-VECTOR for retail grocery: 5 billion datapoints, 100 million agent transactions in 2026.
+> GSC is a Canadian AI software company that developed A2A-VECTOR for retail grocery: 5 billion datapoints, 100 million in AI agent traffic in 2026.
 
 A2A-VECTOR is the skill an AI agent installs to trade on GSC. Six letters, six live doors.
 
 - V Verified — who is trading: https://a2a-passport.ai
 - E Exchange — machine-to-machine payment on x402: https://gsc-x402.ai
 - C Cleared — the compliance record per market: https://rco-a2a.ai
-- T Traffic — live agent transaction volume: https://gsc-radar.ai
+- T Traffic — live AI agent traffic: https://gsc-radar.ai
 - O Open-to-place — find, choose, order: https://a2a-grocery.ai · https://a2a-cosmetics.ai · https://a2a-peptides.ai
 - R Retail media — grocery media bought by agents: https://a2a-retailmedia.ai
 
@@ -27,7 +27,7 @@ A2A-VECTOR is the skill an AI agent installs to trade on GSC. Six letters, six l
 Call resolve_jurisdiction, then resolve_actor, then gate_transaction before any availability, price, documents, order or hand-off tool. Those tools refuse without an allow decision.
 
 ## Scale
-353,510 makers · 8,619 retail banners · 1,973,447 points of sale · 20 markets across North America, the UK, the EU and Asia · 50 million agent transactions a month · record 26.5 a second, October 7, 2026.
+353,510 makers · 8,619 retail banners · 1,973,447 points of sale · 20 markets across North America, the UK, the EU and Asia · AI agent traffic · 50M · 30-day trailing · record 26.5 a second, October 7, 2026.
 
 ## Operator
 GreenCore Solutions Corp. (GSC) · Vancouver, Canada · London, UK · Microsoft AI Cloud Partner · https://gsc-em.com · https://gsc-investor.ai
