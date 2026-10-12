@@ -14,7 +14,7 @@ Runs on OAuth 2.1, Model Context Protocol (MCP), Agent-to-Agent (A2A) and x402. 
 |---|---|---|
 | V | Verified | a2a-passport.ai |
 | E | Exchange | gsc-x402.ai |
-| C | Cleared | rco-a2a.ai |
+| C | Confirmed | gtinfetch.ai |
 | T | Traffic | gsc-radar.ai |
 | O | Open-to-place | a2a-grocery.ai · a2a-cosmetics.ai · a2a-peptides.ai |
 | R | Retail media | a2a-retailmedia.ai |
