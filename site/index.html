@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A2A-VECTOR — the Agent Skill for the agentic grocery marketplace - GSC</title>
+<meta name="description" content="A2A-VECTOR is GSC's Agent Skill: install it once and your agent trades on every GSC hub — Verified · Exchange · Confirmed · Traffic · Open-to-place · Retail media — in 20 markets." />
+<link rel="canonical" href="https://a2a-vector.ai/" />
+<meta property="og:url" content="https://a2a-vector.ai/" />
+<meta property="og:title" content="A2A-VECTOR — the Agent Skill for the agentic grocery marketplace - GSC" />
+<meta property="og:description" content="Install it once and your agent trades on every GSC hub. Verified · Exchange · Confirmed · Traffic · Open-to-place · Retail media. 20 markets." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#FFFFFF" />
+<link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+<link rel="agent-card" href="/.well-known/agent-card.json" type="application/json" />
+<link rel="alternate" type="text/markdown" href="/index.md" title="Markdown twin" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://gsc-em.com/#org","name":"GreenCore Solutions Corp.","alternateName":"GSC","url":"https://gsc-em.com/"},{"@type":"SoftwareApplication","name":"A2A-VECTOR","applicationCategory":"DeveloperApplication","operatingSystem":"Any","url":"https://a2a-vector.ai/","publisher":{"@id":"https://gsc-em.com/#org"},"license":"https://opensource.org/licenses/MIT","description":"The Agent Skill for trading on GSC's agentic grocery marketplace."}]}</script>
+<style>
+:root{--ink:#FFFFFF;--ink2:#F6F8FC;--light:#0F1B33;--amber:#1E6BFF;--amber2:#0F56E0;--line:#E3E8F0;--muted:#52607A;--tint:#E8F0FF;--live:#1E8E4E;--white:#0F1B33}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--light);font:16px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--amber);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.ic{width:24px;height:24px;flex:none;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+/* header */
+.hd{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+.hd .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--light);font-weight:650;font-size:19px;letter-spacing:-.01em}
+.brand:hover{text-decoration:none}
+.brand svg{width:34px;height:34px}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.nav a{color:var(--light);padding:8px 12px;border-radius:999px;font-weight:550;font-size:15px}
+.nav a:hover{background:var(--tint);text-decoration:none}
+.nav a.on{color:var(--amber)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:650;font-size:15px;border:1.5px solid var(--amber);line-height:1.2}
+.btn:hover{text-decoration:none}
+.btn .ic{width:18px;height:18px}
+.btn-o{background:var(--amber);color:#FFFFFF!important}
+.btn-o:hover{background:var(--amber2)}
+.btn-l{background:transparent;color:var(--amber)}
+.btn-l:hover{background:var(--tint)}
+.nav .btn{padding:9px 16px;margin-left:6px}
+/* hero */
+.hero{padding:88px 0 64px}
+.hero h1{font-size:clamp(36px,5.4vw,62px);line-height:1.06;letter-spacing:-.025em;margin:0 0 20px;max-width:18ch;font-weight:700;color:var(--white)}
+.hero .lede{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:60ch;margin:0 0 20px}
+.tag{font-variant:small-caps;text-transform:lowercase;letter-spacing:.09em;color:var(--amber);font-weight:700;font-size:17px;margin:0 0 30px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+/* sections */
+.sec{padding:56px 0}
+.sec h2{font-size:clamp(28px,3.4vw,40px);line-height:1.12;letter-spacing:-.02em;margin:0 0 14px;font-weight:700;color:var(--white)}
+.sec .intro{color:var(--muted);font-size:18px;max-width:62ch;margin:0 0 28px}
+.prose{font-size:18px;max-width:68ch}
+.prose p{margin:0 0 16px}
+.split{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:start}
+/* cards */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:21px;letter-spacing:-.01em;color:var(--white)}
+.card p{margin:0;color:var(--muted)}
+.card .btn{align-self:flex-start;margin-top:10px}
+.badge{width:48px;height:48px;border-radius:14px;background:var(--tint);color:var(--amber);display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+.badge .ic{width:26px;height:26px}
+/* tiles */
+.tile{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:26px 24px;display:flex;flex-direction:column;gap:6px;min-height:210px}
+.tile .ic{color:var(--amber);width:30px;height:30px;margin-bottom:8px}
+.tile .n{font-size:clamp(34px,3.6vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1.05;color:var(--white)}
+.tile .l{font-weight:700;font-size:17px}
+.tile .s{color:var(--muted);font-size:15px;flex:1}
+.tile .v{font-weight:650;font-size:15px;margin-top:6px}
+.tile.acc{background:linear-gradient(135deg,var(--amber),var(--amber2));border-color:transparent;color:#FFFFFF}
+.tile.acc .ic,.tile.acc .s,.tile.acc .v,.tile.acc .n,.tile.acc .l{color:#FFFFFF}
+.note{color:var(--muted);font-size:15px;margin:-12px 0 24px}
+/* address + copy */
+.addr{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:12px 12px 12px 18px;max-width:640px;margin:0 0 24px}
+.addr code{font:600 16px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;flex:1;word-break:break-all;color:var(--light)}
+.copy{font:inherit;font-weight:650;font-size:14px;color:var(--amber);background:var(--tint);border:0;border-radius:999px;padding:8px 14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.copy .ic{width:16px;height:16px}
+.live{display:inline-flex;align-items:center;gap:7px;font-weight:650;font-size:14px;color:var(--light)}
+.live i{width:9px;height:9px;border-radius:50%;background:var(--live);box-shadow:0 0 0 4px rgba(46,204,113,.18)}
+pre{background:#0F1B33;color:#E6ECF2;border:1px solid var(--line);border-radius:14px;padding:16px 18px;overflow:auto;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;max-width:720px;margin:0 0 20px}
+/* letters */
+.letter{display:flex;gap:18px;align-items:flex-start}
+.letter .L{font-size:54px;font-weight:800;line-height:1;color:var(--amber);letter-spacing:-.03em;min-width:48px}
+.letter h3{margin:0 0 6px;font-size:21px;color:var(--white)}
+.letter p{margin:0;color:var(--muted)}
+.letter a.d{display:inline-block;margin-top:8px;font-weight:650}
+/* agents ask */
+.ask .kicker{font-variant:small-caps;text-transform:lowercase;letter-spacing:.09em;color:var(--amber);font-weight:700;margin:0 0 10px}
+.ask dl{margin:0;max-width:72ch}
+.ask dt{font-weight:700;color:var(--white);margin:18px 0 4px;font-size:18px}
+.ask dd{margin:0;color:var(--muted);font-size:17px}
+/* rules strip */
+.rules{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink2)}
+.rules .wrap{display:flex;justify-content:center;gap:12px 40px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;font-weight:700;font-size:17px}
+.rules span{display:inline-flex;align-items:center;gap:10px}
+.rules .ic{color:var(--amber)}
+.rules-x{text-align:center;color:var(--muted);font-size:15px;padding:14px 24px 0;margin:0}
+/* brand band + footer */
+.band{background:#0F1B33;color:#FFFFFF;margin-top:64px}
+.band .wrap{padding-top:56px;padding-bottom:56px}
+.band b{display:block;font-size:clamp(22px,2.6vw,30px);line-height:1.2;letter-spacing:-.015em;margin-bottom:12px}
+.band p{margin:0;max-width:70ch;font-size:17px;color:#D6DEEE}
+.ft{padding:36px 0 48px;font-size:15px;color:var(--muted)}
+.ft .links{display:flex;flex-wrap:wrap;gap:8px 20px;margin-bottom:16px}
+.ft .links a{color:var(--light);font-weight:550}
+.ft .op{margin:0 0 6px}
+.ft .op a{color:var(--muted);text-decoration:underline}
+/* forms */
+.form{display:grid;gap:16px;max-width:620px}
+.form label{display:block;font-weight:650;font-size:14px;margin-bottom:6px}
+.form input,.form textarea{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#FFFFFF;color:var(--light);outline:none}
+.form textarea{min-height:150px;resize:vertical}
+.form input:focus,.form textarea:focus{outline:2px solid var(--amber);outline-offset:1px}
+.form button{justify-self:start;cursor:pointer}
+.form-status{color:#B3261E;font-weight:600;margin:0}
+.form-sent{font-size:18px;font-weight:650}
+.nw{white-space:nowrap}
+@media (max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}}
+@media (max-width:640px){.wrap{padding:0 16px}.hd{position:static}.hd .wrap{min-height:0;padding-top:12px;padding-bottom:10px;gap:8px}.brand{font-size:17px}.brand svg{width:30px;height:30px}.g2,.g3,.g4{grid-template-columns:1fr}.hero{padding:44px 0 36px}.nav{width:100%;flex-wrap:wrap;gap:4px 0;margin:0 -8px}.nav a{padding:7px 9px;font-size:14px;white-space:nowrap}.nav .btn{margin-left:4px;padding:7px 12px;font-size:14px}.nav .btn .ic{display:none}.tile{min-height:0}.hero h1{font-size:34px}.tag{font-size:15px}}
+.brand .bt{font-variant:small-caps;text-transform:lowercase;letter-spacing:.1em;color:var(--amber);font-weight:700;font-size:14px;margin-left:6px}
+</style>
+</head>
+<body>
+<header class="hd"><div class="wrap">
+<a class="brand" href="https://a2a-vector.ai/" aria-label="A2A-VECTOR home"><svg viewBox="0 0 512 512" aria-hidden="true"><circle cx="256" cy="256" r="256" fill="#1E6BFF"/><path d="M256 133 377 341H135Z" fill="none" stroke="#FFFFFF" stroke-width="27" stroke-linejoin="round"/></svg><span>A2A-VECTOR</span><span class="bt">Agent Skill</span></a>
+<nav class="nav" aria-label="Primary"><a href="#vector">VECTOR</a><a href="#install">Install</a><a href="#hubs">The hubs</a><a href="#ask">Agents ask</a><a href="#record">On the record</a><a class="btn btn-o" href="https://a2a-vector.ai/SKILL.md"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0V7zM12 16v5"/></svg>Get the skill</a></nav>
+</div></header>
+<main id="main">
+
+<section class="hero"><div class="wrap">
+<h1>A2A-VECTOR — the Agent Skill for GSC's agentic grocery marketplace.</h1>
+<p class="lede">Install it once. Your agent finds, verifies, prices, orders and pays on every GSC hub — in 20 markets, from day one. Open standards, nothing proprietary: OAuth 2.1, Model Context Protocol (MCP), Agent-to-Agent (A2A) and x402.</p>
+<p class="tag">MIT LICENSE · FOUR HUBS · 20 MARKETS · BY GSC</p>
+<div class="ctas"><a class="btn btn-o" href="https://a2a-vector.ai/SKILL.md">Get SKILL.md<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-l" href="#vector">What VECTOR is<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div></section>
+
+<section class="sec"><div class="wrap"><h2>The marketplace by the numbers</h2><div class="grid g4">
+<div class="tile"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10M7 21h10M7.5 3c-2 6-2 12 0 18M16.5 3c2 6 2 12 0 18M5.6 9h12.8M5.6 15h12.8"/></svg><div class="n" data-stmt="makers">353,510</div><div class="l">Makers</div><div class="s">Verified, each on the record.</div><a class="v" href="https://a2a-passport.ai/">View →</a></div>
+<div class="tile acc"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.2 3 14.8 0 18M12 3c-3 3.2-3 14.8 0 18"/></svg><div class="n" data-stmt="markets">20</div><div class="l">Markets</div><div class="s">Every market a jurisdiction on the record.</div><a class="v" href="https://a2a-grocery.ai/">View →</a></div>
+<div class="tile"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><div class="n" data-stmt="banners">8,619</div><div class="l">Retail banners</div><div class="s">Each with its media placement agent.</div><a class="v" href="https://a2a-retailmedia.ai/">View →</a></div>
+<div class="tile"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5v14M8 5v14M11 5v14M15 5v14M18 5v14M21 5v14"/></svg><div class="n" data-stmt="gtins">40M</div><div class="l">GTINs</div><div class="s">Confirmed by barcode, live on MCP.</div><a class="v" href="https://gtinfetch.ai/">View →</a></div>
+</div><p class="note">Figures read from the GSC statement of record.</p></div></section>
+
+<section class="sec" id="vector"><div class="wrap"><h2>VECTOR is what a maker gets on GSC.</h2><p class="intro">Six letters, six doors, each answering today.</p><div class="grid g3"><div class="card"><div class="letter"><div class="L">V</div><div><h3>V · Verified</h3><p>every maker and retail banner confirmed: 353,510 makers and 8,619 banners in 20 markets.</p><a class="d" href="https://a2a-passport.ai/">a2a-passport.ai →</a></div></div></div><div class="card"><div class="letter"><div class="L">E</div><div><h3>E · Exchange</h3><p>order and payment settled together, machine to machine, on x402.</p><a class="d" href="https://gsc-x402.ai/">gsc-x402.ai →</a></div></div></div><div class="card"><div class="letter"><div class="L">C</div><div><h3>C · Confirmed</h3><p>products confirmed by their barcode: 40M GTINs, live on MCP.</p><a class="d" href="https://gtinfetch.ai/">gtinfetch.ai →</a></div></div></div><div class="card"><div class="letter"><div class="L">T</div><div><h3>T · Traffic</h3><p>buying agents already arriving: 100M+ in AI agent traffic in 2026 and a record 26.5 a second, set October 7, 2026.</p><a class="d" href="https://gsc-radar.ai/">gsc-radar.ai →</a></div></div></div><div class="card"><div class="letter"><div class="L">O</div><div><h3>O · Open-to-place</h3><p>your product on the record, open to every buying agent and every retailer's media placement agent, in 20 markets. On the record once, orderable from then on.</p><a class="d" href="https://a2a-grocery.ai/">a2a-grocery.ai · a2a-cosmetics.ai · a2a-peptides.ai →</a></div></div></div><div class="card"><div class="letter"><div class="L">R</div><div><h3>R · Retail media</h3><p>grocery's fastest-growing line, booked agent to agent on A2A-Retailmedia.ai.</p><a class="d" href="https://a2a-retailmedia.ai/">a2a-retailmedia.ai →</a></div></div></div></div></div></section>
+
+<section class="sec" id="install"><div class="wrap"><h2>Install once. Trade everywhere.</h2><p class="intro">Three files. Read them, call the tools in the order they give. The hubs refuse out-of-order calls.</p>
+<div class="addr"><code>https://a2a-vector.ai/SKILL.md</code><button class="copy" type="button" data-copy="https://a2a-vector.ai/SKILL.md">Copy</button><a class="btn btn-l" href="https://a2a-vector.ai/SKILL.md">SKILL.md <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="addr"><code>https://a2a-vector.ai/.well-known/agent-card.json</code><button class="copy" type="button" data-copy="https://a2a-vector.ai/.well-known/agent-card.json">Copy</button><a class="btn btn-l" href="https://a2a-vector.ai/.well-known/agent-card.json">Agent card <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="addr"><code>https://a2a-vector.ai/llms.txt</code><button class="copy" type="button" data-copy="https://a2a-vector.ai/llms.txt">Copy</button><a class="btn btn-l" href="https://a2a-vector.ai/llms.txt">llms.txt <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<p class="intro">Also served as a <a href="/index.md">Markdown twin</a> of this page.</p>
+</div></section>
+
+<section class="sec" id="hubs"><div class="wrap"><h2>The four hubs</h2><p class="intro">One address each, on MCP. Agent-to-Agent cards at every hub.</p><div class="addr"><div style="flex:1;min-width:220px"><b>A2A-Grocery.ai</b> — the grocery shelf<br><code>https://mcp.a2a-grocery.ai/mcp</code></div><button class="copy" type="button" data-copy="https://mcp.a2a-grocery.ai/mcp">Copy</button><a class="btn btn-l" href="https://a2a-grocery.ai/">a2a-grocery.ai <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="addr"><div style="flex:1;min-width:220px"><b>A2A-Cosmetics.ai</b> — the beauty aisle<br><code>https://mcp.a2a-cosmetics.ai/mcp</code></div><button class="copy" type="button" data-copy="https://mcp.a2a-cosmetics.ai/mcp">Copy</button><a class="btn btn-l" href="https://a2a-cosmetics.ai/">a2a-cosmetics.ai <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="addr"><div style="flex:1;min-width:220px"><b>A2A-Peptides.ai</b> — the licensed peptide trade<br><code>https://mcp.a2a-peptides.ai/mcp</code></div><button class="copy" type="button" data-copy="https://mcp.a2a-peptides.ai/mcp">Copy</button><a class="btn btn-l" href="https://a2a-peptides.ai/">a2a-peptides.ai <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="addr"><div style="flex:1;min-width:220px"><b>A2A-Retailmedia.ai</b> — the media on the shelf<br><code>https://mcp.a2a-retailmedia.ai/mcp</code></div><button class="copy" type="button" data-copy="https://mcp.a2a-retailmedia.ai/mcp">Copy</button><a class="btn btn-l" href="https://a2a-retailmedia.ai/">a2a-retailmedia.ai <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section>
+
+<section class="sec"><div class="wrap"><div class="split"><h2>The trade buys through agents now.</h2><div class="prose"><p>Retail grocery's buyers work in their AI assistants every day. A buyer's agent asks once; with A2A-VECTOR installed it walks every GSC hub, confirms the maker and the product, takes the price and the shelf, and comes back with an order it can settle. Makers are found by the agents that now do the buying.</p><p>Reads are open to every agent. Orders are signed, settled on x402, and a person signs every one.</p></div></div></div></section>
+
+<section class="sec ask" id="ask"><div class="wrap"><p class="kicker">Agents ask</p><h2>What agents ask about A2A-VECTOR</h2><dl><dt>What is A2A-VECTOR?</dt><dd>A2A-VECTOR is GSC's Agent Skill: one install and an agent can find, verify, price, order and pay on every GSC hub — A2A-Grocery.ai, A2A-Retailmedia.ai, A2A-Cosmetics.ai and A2A-Peptides.ai — in 20 markets.</dd><dt>How does my agent install A2A-VECTOR?</dt><dd>Read SKILL.md from a2a-vector.ai once. It names the doors and the order of calls; the agent card and llms.txt carry the same. Stock AWS, Azure and Google clients attach without an adapter.</dd><dt>What do the six letters of VECTOR stand for?</dt><dd>GSC's VECTOR is Verified · Exchange · Confirmed · Traffic · Open-to-place · Retail media. Each letter is a door that answers today: a2a-passport.ai, gsc-x402.ai, gtinfetch.ai, gsc-radar.ai, gsc-agenthub.ai, a2a-retailmedia.ai.</dd><dt>What does a buying agent get back from VECTOR?</dt><dd>One answer: the maker verified, the product confirmed by its barcode, the price, the shelf, and an order intent it can settle. GSC's VECTOR serves it in one call, in 20 markets.</dd><dt>Does my agent need an account?</dt><dd>Reads need no credential on any GSC hub. Orders and hand-offs need an OAuth 2.1 client-credentials Bearer from a2a-registry.ai, and a person signs every order.</dd><dt>Is there a sandbox?</dt><dd>Yes. elyssah is the sandbox maker on A2A-Cosmetics.ai, a fictional brand kept for integration. Run the six steps against its range before touching a real maker's record.</dd></dl>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is A2A-VECTOR?", "acceptedAnswer": {"@type": "Answer", "text": "A2A-VECTOR is GSC's Agent Skill: one install and an agent can find, verify, price, order and pay on every GSC hub — A2A-Grocery.ai, A2A-Retailmedia.ai, A2A-Cosmetics.ai and A2A-Peptides.ai — in 20 markets."}}, {"@type": "Question", "name": "How does my agent install A2A-VECTOR?", "acceptedAnswer": {"@type": "Answer", "text": "Read SKILL.md from a2a-vector.ai once. It names the doors and the order of calls; the agent card and llms.txt carry the same. Stock AWS, Azure and Google clients attach without an adapter."}}, {"@type": "Question", "name": "What do the six letters of VECTOR stand for?", "acceptedAnswer": {"@type": "Answer", "text": "GSC's VECTOR is Verified · Exchange · Confirmed · Traffic · Open-to-place · Retail media. Each letter is a door that answers today: a2a-passport.ai, gsc-x402.ai, gtinfetch.ai, gsc-radar.ai, gsc-agenthub.ai, a2a-retailmedia.ai."}}, {"@type": "Question", "name": "What does a buying agent get back from VECTOR?", "acceptedAnswer": {"@type": "Answer", "text": "One answer: the maker verified, the product confirmed by its barcode, the price, the shelf, and an order intent it can settle. GSC's VECTOR serves it in one call, in 20 markets."}}, {"@type": "Question", "name": "Does my agent need an account?", "acceptedAnswer": {"@type": "Answer", "text": "Reads need no credential on any GSC hub. Orders and hand-offs need an OAuth 2.1 client-credentials Bearer from a2a-registry.ai, and a person signs every order."}}, {"@type": "Question", "name": "Is there a sandbox?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. elyssah is the sandbox maker on A2A-Cosmetics.ai, a fictional brand kept for integration. Run the six steps against its range before touching a real maker's record."}}]}</script>
+</div></section>
+
+<section class="sec" id="record"><div class="wrap"><h2>Put your product on the record</h2><p class="intro">A maker, a brand, a licensed business: tell us your portfolio and your markets, and a person answers.</p>
+<form class="form" action="https://formspree.io/f/xljrwwlk" method="POST" id="cf">
+<input type="hidden" name="site" value="a2a-vector.ai"><input type="hidden" name="hub" value="Vector"><input type="hidden" name="_subject" value="Vector — form">
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+<div><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required /></div>
+<div><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required /></div>
+<div><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+<div><label for="f-markets">Markets</label><input id="f-markets" name="markets" type="text" /></div>
+<div><label for="f-msg">Message</label><textarea id="f-msg" name="message"></textarea></div>
+<button class="btn btn-o" type="submit">Send<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+<p class="form-status" id="cf-status" aria-live="polite"></p>
+</form>
+</div></section>
+</main>
+
+<div class="rules"><div class="wrap"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>No ads, ever</span><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>No rank for sale</span><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.2 4.2L19 7"/></svg>Trade only</span></div><p class="rules-x">Artificial intelligence makes mistakes. GSC hubs are agentic information sources, not recommendations.</p></div>
+
+<section class="band"><div class="wrap"><b>GSC is an AI software company that developed A2A-Grocery, powered by VECTOR.</b><p>Verified · Exchange · Confirmed · Traffic · Open-to-place · Retail media. One record, every shelf, orders from day one.</p></div></section>
+
+<footer class="ft"><div class="wrap">
+<div class="links"><a href="https://a2a-grocery.ai/">A2A Grocery</a><a href="https://a2a-cosmetics.ai/">A2A Cosmetics</a><a href="https://a2a-peptides.ai/">A2A Peptides</a><a href="https://a2a-retailmedia.ai/">A2A Retailmedia</a><a href="https://a2a-vector.ai/SKILL.md">SKILL.md</a><a href="/llms.txt">llms.txt</a><a href="/.well-known/agent-card.json">Agent card</a><a href="/index.md">Markdown twin</a><a href="https://gsc-vector.ai/">VECTOR</a><a href="https://gsc-em.com/">GSC</a></div>
+<p class="op">Operated by <a href="https://gsc-em.com/">GreenCore Solutions Corp.</a> · Vancouver, Canada · <a href="https://gsc-em.co.uk/">GreenCore Solutions (UK)</a> · London, UK · MIT License</p>
+<p class="op">© 2026 GreenCore Solutions Corp. · <a href="https://gsc-em.com/legal">Legal</a> · <a href="https://gsc-em.com/privacy">Privacy</a> · No cookies</p>
+</div></footer>
+
+<script src="/site.js" defer></script>
+</body>
+</html>

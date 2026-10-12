@@ -1,7 +1,7 @@
 // site/build.mjs — a2a-vector.ai: render README.md with the A2A hub chrome; serve SKILL.md, llms.txt, agent-card.json verbatim.
 // Output: dist/ (index.html, index.md = README.md bytes, SKILL.md, llms.txt, README.md, .well-known/agent-card.json, styles.css, _headers).
 // The repo is the only copy of the four files; this script reads them at build time. VECTOR-02 (CEO 2026-10-10). VECTOR-09 (CEO 2026-10-11): the footer of record — close line Powered by VECTOR → gsc-vector.ai, the GSC links, © 2026, the operator line with both offices.
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, copyFileSync, existsSync } from "node:fs";
 import { marked } from "marked";
 const readme = readFileSync("README.md", "utf8");
 const llmsFirst = readFileSync("llms.txt", "utf8").split("\n")[0].replace(/^#\s*/, "");
@@ -50,9 +50,19 @@ ${marked.parse(readme).replace(/<h1[^>]*>[^<]*<\/h1>/, `<h1>${h1}</h1>`)}
 </html>
 `;
 mkdirSync("dist/.well-known", { recursive: true });
-writeFileSync("dist/index.html", html);
+// VECTOR-10 (CEO 2026-10-12): the root page is site/index.html (A2A-VECTOR_SITE.zip) with site/site.js; index.md is regenerated from that page. The README render above stays as the fallback.
+const page = existsSync("site/index.html") ? readFileSync("site/index.html", "utf8") : null;
+writeFileSync("dist/index.html", page || html);
+if (page) copyFileSync("site/site.js", "dist/site.js");
 for (const f of ["README.md", "SKILL.md", "llms.txt"]) copyFileSync(f, "dist/" + f);
-copyFileSync("README.md", "dist/index.md");
+if (page) {
+  const TurndownService = (await import("turndown")).default;
+  const td = new TurndownService({ headingStyle: "atx", bulletListMarker: "-", codeBlockStyle: "fenced" });
+  td.remove(["script", "style", "svg", "form", "button", "noscript"]);
+  const body = (page.match(/<body[^>]*>([\s\S]*)<\/body>/) || [null, page])[1];
+  const md = td.turndown(body).replace(/\n{3,}/g, "\n\n").trim();
+  writeFileSync("dist/index.md", `# ${title}\n\nhttps://a2a-vector.ai/ · Markdown twin of the page\n\n${md}\n`);
+} else copyFileSync("README.md", "dist/index.md");
 copyFileSync("agent-card.json", "dist/.well-known/agent-card.json");
 copyFileSync("site/styles.css", "dist/styles.css");
 writeFileSync("dist/_headers", `/*
@@ -60,7 +70,7 @@ writeFileSync("dist/_headers", `/*
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000; includeSubDomains
-  Content-Security-Policy: default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'; form-action https://formspree.io
+  Content-Security-Policy: default-src 'self'; script-src 'self'; connect-src 'self' https://gsc-radar.ai https://formspree.io; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'; form-action https://formspree.io
 /SKILL.md
   Content-Type: text/markdown; charset=utf-8
 /index.md

@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install --no-save marked@15 wrangler@4
+      - run: npm install --no-save marked@15 turndown@7.2.0 wrangler@4
       - run: node site/build.mjs
       - run: npx wrangler pages deploy dist --project-name a2a-vector-ai --branch main --commit-dirty=true
         env:
